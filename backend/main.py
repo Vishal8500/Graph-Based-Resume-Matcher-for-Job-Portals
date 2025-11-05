@@ -333,7 +333,7 @@ def expand_skill_ontology_with_gemini(skills: list):
 
     unprocessed_skills = []
     with neo4j_driver.session() as session:
-        # 🚀 FIXED CYPHER QUERY SYNTAX
+        #CYPHER QUERY SYNTAX
         result = session.run("""
             UNWIND $skills AS skillName
             MERGE (s:Skill {name: skillName})
